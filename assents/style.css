@@ -1,0 +1,218 @@
+:root{
+  --header-height: 3rem;
+  --hue-color: 250;
+  
+  /* SE EU QUISER ALTERTAR A COR, MUDAR O PRIMEIRO (250) */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #FFF;
+
+  /* ==== font size ===== */
+  /* --body-font: font-family: 'Poppins', sans-serif; */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /* ==== font weight===== */
+  --font-medioum:500;
+  --font-semi-bold:600;
+
+  /* @media screen and(min-widht: 968) {
+  --big-font-size: 3rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --noraml-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+  } */
+
+      /* ==== reset css === */
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+     
+
+
+}
+
+
+body{
+  padding: 60px 23px 66px;
+  margin: 0 0 var(--header-height) 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,h2,h3,h4{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+nav{
+    margin-left: 3rem;
+    margin-right: 3rem;
+  
+  display: flex;
+  justify-content: space-between;  
+  font-size: var(--font-medioum);
+}
+ul{
+  text-decoration: none;
+  list-style: none;
+}
+
+nav ul{
+  display: flex;
+  gap: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav ul li:hover{
+  color: var(--first-color);
+  cursor: pointer;
+
+}
+
+          /* ====Main==== */
+
+.main{
+  height: 100vh;
+  padding: 2rem 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+.home__icon{
+  width: 36px;
+  height: auto;
+  cursor: pointer;
+  fill: var(--first-color);
+}
+.home__icon:hover{
+  fill: var(--first-color);
+}
+
+.text__content{
+  font-size: var(--small-font-size);
+  max-width: 700px;
+  font-size: var(--normal-font-size);
+}
+.text__content p{
+  max-width: 400px;
+}
+.text__content h1{
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.text__content h3{
+  font-size: var(--normal-font-size);
+  font-weight: 400;
+  margin-top: -20px;
+  
+}
+.home__btn{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+ border: none;
+ border-radius: 6px;
+
+ background-color: var(--first-color);
+ color: #FFF;
+
+padding: 8px;
+font-size: var(--small-font-size);
+font-weight: var(--font-semi-bold);
+
+}
+.home__btn img{
+  width: 25px;
+  height: auto;
+  fill: var(--first-color);
+}
+
+
+
+.home__blob{
+  width: 400px;
+  height: auto;
+  /* mudar a cor do svg */
+  fill: var(--first-color);
+  margin-bottom: 10rem;
+}
+
+.img__perfil{
+  width: 100%;
+}
+
+
+
+
+          /* ====MEDIAS=== */
+
+@media (max-width:920px) {
+  .main{
+    padding: 0 0 4rem;
+   
+    
+  }
+          /* media icones */
+  .home__icon{
+    width: 28px;
+    height: auto;
+  }
+
+              /* Text content */
+  .text__content{
+
+    font-size: var(--small-font-size);
+  }
+  .text__content h1{
+    font-size: var(--normal-font-size);
+  }
+  .text__content h3{
+    font-size: var(--small-font-size);
+    margin-top: -13px;
+  }
+ 
+  .home__btn{
+    padding: 4px;
+  }
+
+            /* Imagem de perfil */
+
+  .home__blob{
+    
+    width: 250px;
+  }
+
+  
+}
+
+
+

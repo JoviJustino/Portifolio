@@ -12,7 +12,7 @@
 
   /* ==== font size ===== */
   /* --body-font: font-family: 'Poppins', sans-serif; */
-  --big-font-size: 2rem;
+  --big-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -68,7 +68,7 @@ nav{
     margin-right: 3rem;
   
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-around;  
   font-size: var(--font-medioum);
 }
 ul{
@@ -99,12 +99,17 @@ nav ul li:hover{
   justify-content: space-evenly;
 }
 
+.social{
+  animation-name: anime__top;
+  animation-duration: 1.5s;
+  animation-delay: .2s;
+}
+
 .social ul{
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  
 }
 .home__icon{
   width: 36px;
@@ -157,8 +162,8 @@ font-weight: var(--font-semi-bold);
 }
 
 
-
 .home__blob{
+  /* position: relative; */
   width: 400px;
   height: auto;
   /* mudar a cor do svg */
@@ -170,6 +175,46 @@ font-weight: var(--font-semi-bold);
   width: 100%;
 }
 
+              /* ==== Pagina sobre mim ==== */
+
+
+.about{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}       
+
+.about .text__content h1{
+font-weight: var(--font-semi-bold); 
+font-size: var(--big-font-size);
+
+}
+.about .about-text__content h3{
+  color: var(--text-color);
+  font-weight: var(--normal-font-size);
+  margin-top: -20px;
+  
+}
+
+.container__perfil-about p{
+  margin-top: -200px;
+  font-size: var(--h3-font-size);
+}
+
+
+
+.container__perfil-about{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.about__perfil{
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+}
+
 
 
 
@@ -177,11 +222,21 @@ font-weight: var(--font-semi-bold);
 
 @media (max-width:920px) {
   .main{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
     padding: 0 0 4rem;
    
     
   }
           /* media icones */
+  .social{
+    position: absolute;
+    left: 2px;
+    top: 190px;
+  }
+
   .home__icon{
     width: 28px;
     height: auto;
@@ -189,30 +244,51 @@ font-weight: var(--font-semi-bold);
 
               /* Text content */
   .text__content{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: var(--small-font-size);
+  }
+  .text__content p {
+    width: 310px;
+   font-size: var(--normal-font-size);
   }
   .text__content h1{
-    font-size: var(--normal-font-size);
+    font-size: var(--big-font-size);
   }
   .text__content h3{
-    font-size: var(--small-font-size);
-    margin-top: -13px;
+    font-size: var(--normal-font-size);
+    margin-top: -20px;
   }
  
   .home__btn{
-    padding: 4px;
+    margin: 4rem auto 0;
+    padding: 15px;
+    font-weight: var(--font-semi-bold);
+    justify-content: center;
+    align-items: center;
+    font-size: var(--h2-font-size);
+    
   }
+ 
 
             /* Imagem de perfil */
 
   .home__blob{
-    
-    width: 250px;
+    max-width: 240px;
+    margin-bottom: 1px;
   }
-
+  
   
 }
+
+@keyframes anime__top{
+ 0%{ top: 0px}
+  100%{ top: 190px}
+}
+
+
 
 
 
